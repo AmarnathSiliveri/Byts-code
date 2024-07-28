@@ -24,7 +24,7 @@ public class Sumofsquarenumbers
             int n=sc.nextInt();
             if (sqSum(n))
             {
-                System.out.println(n+"can ber epresented as sum of squares numbers");
+                System.out.println(n+"can be represented as sum of squares numbers");
 
             }
             sc.close();
