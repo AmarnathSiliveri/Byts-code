@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Uglynum {
 
     
-    static boolean isUgly(int n) {
+     public static boolean isUgly(int n) {
         if (n <= 0) return false; 
         
         
