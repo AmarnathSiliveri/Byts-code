@@ -1,19 +1,21 @@
 import java.util.Scanner;  
-public class Bubblesort {
+public class Selectionsort {
 
-    public static void bubblesort( int[] arr)
+    public static void selectionsort( int[] arr)
     { 
         int n= arr.length;
         for (int i=0;i<n-1;i++)
         {
-            for(int j=0;j<n-i-1;j++)
+            int minindex=i;
+            for(int j=i+1;j<n;j++)
             {
-                if (arr[j]>arr[j+1])
+                if (arr[j]<arr[minindex])
                 {
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
+                    minindex=j;
                 }
+                int temp=arr[minindex];
+                arr[minindex]=arr[i];
+                arr[i]=temp;
             }
         }
     }
@@ -37,7 +39,7 @@ public class Bubblesort {
             arr[i] = sc.nextInt();
         }
 
-        bubblesort(arr);
+        selectionsort(arr);
         printarray(arr);
         sc.close();
     }
